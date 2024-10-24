@@ -1,7 +1,7 @@
 """
 uses my history daemon to track
 any videos/podcasts I've listened to through mpv
-https://github.com/seanbreckenridge/mpv-history-daemon
+https://github.com/purarue/mpv-history-daemon
 """
 from promnesia.common import Visit, Loc, Results
 

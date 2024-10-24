@@ -1,6 +1,6 @@
 """
 merges my browsing history
-https://github.com/seanbreckenridge/browserexport
+https://github.com/purarue/browserexport
 https://github.com/karlicoss/HPI/tree/master/my/browser
 """
 

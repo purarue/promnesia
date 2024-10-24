@@ -1,6 +1,6 @@
 """
 Uses TraktExport to grab anything I've watched from trakt
-https://github.com/seanbreckenridge/traktexport
+https://github.com/purarue/traktexport
 """
 
 from promnesia.common import Visit, Loc, Results

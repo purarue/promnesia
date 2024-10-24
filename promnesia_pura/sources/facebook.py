@@ -1,6 +1,6 @@
 """
 Extracts links from my faceook GDPR export
-https://github.com/seanbreckenridge/HPI/tree/master/my/facebook.py
+https://github.com/purarue/HPI/tree/master/my/facebook.py
 """
 
 from promnesia.common import Visit, Loc, Results, iter_urls

@@ -1,6 +1,6 @@
 """
 Uses Grouvee CSV export data
-https://github.com/seanbreckenridge/grouvee_export
+https://github.com/purarue/grouvee_export
 """
 
 from promnesia.common import Visit, Loc, Results

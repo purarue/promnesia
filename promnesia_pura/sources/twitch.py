@@ -1,6 +1,6 @@
 """
 Pageview history from the twitch privacy export
-https://github.com/seanbreckenridge/HPI/blob/master/my/twitch/gdpr.py
+https://github.com/purarue/HPI/blob/master/my/twitch/gdpr.py
 https://www.twitch.tv/p/en/legal/privacy-choices/#user-privacy-requests
 """
 

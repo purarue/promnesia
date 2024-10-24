@@ -1,6 +1,6 @@
 """
 Any albums I've listened to
-https://github.com/seanbreckenridge/albums
+https://github.com/purarue/albums
 """
 
 from datetime import datetime

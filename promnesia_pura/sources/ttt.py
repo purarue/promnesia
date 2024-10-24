@@ -1,6 +1,6 @@
 """
 Extracts links from ttt -- an extension to my shell history
-https://github.com/seanbreckenridge/ttt
+https://github.com/purarue/ttt
 """
 
 from promnesia.common import Visit, Loc, Results, iter_urls

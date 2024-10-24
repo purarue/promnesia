@@ -1,6 +1,6 @@
 """
 Exposes post/metadata from random forums I used in the past
-https://github.com/seanbreckenridge/old_forums
+https://github.com/purarue/old_forums
 """
 
 from promnesia.common import Results, Visit, Loc, iter_urls

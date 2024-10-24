@@ -1,6 +1,6 @@
 """
 Uses malexport to grab anything I've watched from MAL
-https://github.com/seanbreckenridge/malexport
+https://github.com/purarue/malexport
 """
 
 from typing import Optional, Union, List, Callable
