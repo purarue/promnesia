@@ -13,13 +13,13 @@ It indexes any URLs it finds in my:
 - Git commits on my system
 - Todo.txt files
 - Mail, using local IMAP/MBOX backups
-- Albums [I've listened to](https://sean.fish/s/albums)
+- Albums [I've listened to](https://purarue.xyz/s/albums)
 - Facebook Messages
 - comments from some [old forums](https://github.com/purarue/forum_parser) I used to be on
 - pageview history from the [twitch privacy export](https://github.com/purarue/HPI/blob/master/my/twitch/gdpr.py)
 - video games I've logged to [grouvee](https://www.grouvee.com/), using [grouvee export](https://github.com/purarue/grouvee_export)
 
-To use these, import the source and add it to the `SOURCES` array in your promnesia config. See mine [here](https://sean.fish/d/promnesia/config.py?redirect)
+To use these, import the source and add it to the `SOURCES` array in your promnesia config. See mine [here](https://purarue.xyz/d/promnesia/config.py?redirect)
 
 ### Install
 
@@ -33,4 +33,4 @@ To Install:
 
 If you have issues importing/installing this, try a local install instead. See [troubleshooting docs](https://github.com/purarue/HPI/blob/master/doc/TROUBLESHOOTING_INSTALLS.md)
 
-In your config file, to enable these sources, import from `promnesia_pura`. You can see my [config file](https://sean.fish/d/promnesia/config.py?redirect) as an example
+In your config file, to enable these sources, import from `promnesia_pura`. You can see my [config file](https://purarue.xyz/d/promnesia/config.py?redirect) as an example
