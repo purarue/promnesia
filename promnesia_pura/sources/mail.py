@@ -3,10 +3,9 @@ Indexes any links found in my emails
 """
 
 import os
-from typing import Set
 from datetime import date
 
-from my.core.common import mcachew
+from my.core.cachew import mcachew
 from promnesia.common import Results, Visit, Loc, iter_urls, logger
 from promnesia.sources.html import extract_urls_from_html
 
@@ -22,7 +21,7 @@ def do_index() -> Results:
             continue
 
         # mail-specific emitted set, only pull the same URL from one file once
-        emitted: Set[str] = set()
+        emitted: set[str] = set()
 
         headers_ctx = m.description + "\n\n"
 
@@ -66,7 +65,11 @@ def do_index() -> Results:
                 )
 
 
+def _depends_on() -> int:
+    return date.today().month
+
+
 # cache this once every month, it takes about half an hour
-@mcachew(depends_on=lambda: date.today().month)
+@mcachew(depends_on=_depends_on)
 def index() -> Results:
     yield from do_index()

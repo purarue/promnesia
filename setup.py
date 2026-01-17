@@ -1,4 +1,4 @@
-from typing import Iterator
+from collections.abc import Iterator
 from setuptools import setup, find_namespace_packages  # type: ignore
 
 

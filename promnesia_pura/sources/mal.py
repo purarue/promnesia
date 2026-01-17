@@ -3,7 +3,7 @@ Uses malexport to grab anything I've watched from MAL
 https://github.com/purarue/malexport
 """
 
-from typing import Optional, Union, List, Callable
+from collections.abc import Callable
 from datetime import datetime, date
 
 
@@ -18,7 +18,7 @@ def _msg_from_title(username: str) -> str:
     return f"""<p>MAL message from {username}</p>"""
 
 
-def _thread_date(tr: Thread) -> Optional[datetime]:
+def _thread_date(tr: Thread) -> datetime | None:
     for m in reversed(tr.messages):
         if m.at:
             return m.at
@@ -31,8 +31,8 @@ def index() -> Results:
 
     min_time = datetime.min.time()
 
-    def _extract_datetime(info: Union[AnimeData, MangaData]) -> Optional[datetime]:
-        d: Optional[date] = info.XMLData.finish_date or info.XMLData.start_date
+    def _extract_datetime(info: AnimeData | MangaData) -> datetime | None:
+        d: date | None = info.XMLData.finish_date or info.XMLData.start_date
         if d is not None:
             return datetime.combine(d, min_time)
         else:
@@ -40,11 +40,11 @@ def index() -> Results:
                 return info.history[0].at
         return None
 
-    funcs: List[Callable[[], Union[AnimeData, MangaData]]] = [anime, manga]  # type: ignore[list-item]
+    funcs: list[Callable[[], AnimeData | MangaData]] = [anime, manga]  # type: ignore[list-item]
     for _type, func in zip(["anime", "manga"], funcs):
         for item in func():
             assert isinstance(item, AnimeData) or isinstance(item, MangaData)
-            dt: Optional[datetime] = _extract_datetime(item)
+            dt: datetime | None = _extract_datetime(item)
             if dt is None:
                 continue
 
